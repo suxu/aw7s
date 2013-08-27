@@ -1,0 +1,15 @@
+<%= render :partial => "navbar_collection"%>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">地区主页</h3>
+    </div>
+    <div class="panel-body">
+      目前AWS已全球覆盖<%= link_to  Region.all.count,list_console_regions_path %>个地区,您个可以根据您的需求选择不同地区的服务.
+    </div>
+  </div>
+
+<input class="btn btn-info" name="commit" type="submit" value="登录">
+<a href="http://aws.amazon.com/" target="_blank">Amazon Web Services™</a>
+
+<div class="alpha-alert">您可以通过 <a href="mailto:mahb45@gmail.com">Email</a> 或者 <a href="https://github.com/saberma/19wu/issues">Github</a> 向我们反馈问题。</div>

@@ -1,0 +1,7 @@
+<%= render :partial => "navbar_member"%>
+
+<ul>
+<% @coverings.each do |covering| %>
+	<li><%= covering.region.name %></li>
+<%end%>
+</ul>

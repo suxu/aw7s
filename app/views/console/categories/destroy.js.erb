@@ -1,0 +1,5 @@
+<% if @category.destroyed? %>
+$("tr[data-id=<%= @category.id %>]").fadeOut(500);
+<%else%>
+alert("fail");
+<%end%>

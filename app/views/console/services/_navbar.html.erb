@@ -1,0 +1,14 @@
+
+<ul class="nav nav-tabs">
+<li <%= active_class if action_name == "index" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-home"></i>服务首页'),console_services_path%>
+</li>
+<li <%= active_class if action_name == "list" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-list"></i>服务列表'),list_console_services_path%>
+</li>
+
+<li <%= active_class if action_name == "new" || action_name == "create" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-plus"></i>新建服务'),new_console_service_path %>
+</li>
+
+</ul>

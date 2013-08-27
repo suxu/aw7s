@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs">
+<li>
+<%= link_to raw('<i class="glyphicon glyphicon-arrow-left"></i>返回'),list_console_services_path()%>
+</li>
+
+<li <%= active_class if controller_name == "services" && action_name == "show" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-file"></i>基本信息'),console_service_path(@service)%>
+</li>
+<li <%= active_class if controller_name == "services" && action_name == "edit" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-edit"></i>修改信息'),edit_console_service_path(@service) %>
+</li>
+<li <%= active_class if controller_name == "services" && action_name == "coverings" %>>
+<%= link_to raw('<i class="glyphicon glyphicon-map-marker"></i>覆盖地区'),coverings_console_service_path(@service)%>
+</li>
+</ul>

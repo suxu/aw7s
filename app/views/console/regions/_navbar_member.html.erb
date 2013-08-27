@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs">
+<li>
+<%= link_to raw('<i class="glyphicon glyphicon-arrow-left"></i>返回'),list_console_regions_path()%>
+</li>
+
+<li <%= active_class if controller_name == "regions" && action_name == "show" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-file"></i>基本信息'),console_region_path(@region)%>
+</li>
+<li <%= active_class if controller_name == "regions" && action_name == "edit" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-edit"></i>修改信息'),edit_console_region_path(@region) %>
+</li>
+<li <%= active_class if controller_name == "zones" %>>
+<%= link_to raw('<i class="glyphicon glyphicon-map-marker"></i>可用区域'),console_region_zones_path(@region)%>
+</li>
+</ul>

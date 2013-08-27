@@ -1,0 +1,5 @@
+<% if @service.destroyed? %>
+$("tr[data-id=<%= @service.id %>]").fadeOut(500);
+<%else%>
+alert("fail");
+<%end%>

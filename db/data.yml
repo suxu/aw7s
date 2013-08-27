@@ -1,0 +1,268 @@
+#
+regions:
+    -   code: us-east-1
+        name: 美国东部(弗吉尼亚北部)
+        en_name: US East (N. Virginia)
+
+    -   code: us-west-2
+        name: 美国西部(俄勒冈)
+        en_name: US West (Oregon)
+
+    -   code: us-west-1
+        name: 美国西部(加利福尼亚北部)
+        en_name: US West (N. California)
+
+    -   code: eu-west-1
+        name: 欧洲(爱尔兰)
+        en_name: EU (Ireland)
+
+    -   code: ap-southeast-1
+        name: 亚太地区(新加坡)
+        en_name: Asia Pacific (Singapore)
+
+    -   code: ap-northeast-1
+        name: 亚太地区(东京)
+        en_name: Asia Pacific (Tokyo)
+
+    -   code: ap-southeast-2
+        name: 亚太地区(悉尼）
+        en_name: Asia Pacific (Sydney)
+
+    -   code: sa-east-1
+        name: 南美洲(圣保罗)
+        en_name: South America (São Paulo)
+
+#
+zones:
+    -   code: us-east-1a
+        region_code: us-east-1
+    -   code: us-east-1c
+        region_code: us-east-1
+    -   code: us-east-1d
+        region_code: us-east-1
+
+    -   code: us-west-2a
+        region_code: us-west-2
+    -   code: us-west-2b
+        region_code: us-west-2
+    -   code: us-west-2c
+        region_code: us-west-2
+
+    -   code: us-west-1a
+        region_code: us-west-1
+    -   code: us-west-1c
+        region_code: us-west-1
+    -   code: us-west-1d
+        region_code: us-west-1
+
+    -   code: eu-west-1a
+        region_code: eu-west-1
+    -   code: eu-west-1b
+        region_code: eu-west-1
+    -   code: eu-west-1c
+        region_code: eu-west-1
+
+    -   code: ap-southeast-1a
+        region_code: ap-southeast-1
+    -   code: ap-southeast-1b
+        region_code: ap-southeast-1
+
+    -   code: ap-northeast-1a
+        region_code: ap-northeast-1
+    -   code: ap-northeast-1b
+        region_code: ap-northeast-1
+    -   code: ap-northeast-1c
+        region_code: ap-northeast-1
+
+    -   code: ap-southeast-2a
+        region_code: ap-southeast-2
+    -   code: ap-southeast-2b
+        region_code: ap-southeast-2
+
+    -   code: sa-east-1a
+        region_code: sa-east-1
+    -   code: sa-east-1b
+        region_code: sa-east-1
+#
+categories:
+    -   code: cn
+        name: 计算与联网
+        en_name: 'Compute&Networking'
+    -   code: scdn
+        name: 存储与CDN
+        en_name: 'Storage&ContentDelivery'
+    -   code: db
+        name: 数据库
+        en_name: Database
+    -   code: dm
+        name: 部署与管理
+        en_name: 'Deployment&Management'
+    -   code: apps
+        name: 应用服务
+        en_name: AppServices
+#
+services:
+    -   code: ec2
+        name: Amazon EC2
+        full_name: Amazon Elastic Compute Cloud
+        category_code: cn
+        caption: 在云中的虚拟服务器
+
+    -   code: directconnect
+        name: Direct Connect
+        full_name: AWS Direct Connect
+        category_code: cn
+        caption: 专用网络连接到AWS
+
+    -   code: elasticmapreduce
+        name: Amazon EMR
+        full_name: Amazon Elastic MapReduce (Amazon EMR)
+        category_code: cn
+        caption: 一种 Hadoop 托管服务运行架构
+
+    -   code: route53
+        name: Route 53
+        full_name: Amazon Route 53
+        category_code: cn
+        caption: 高可用性和可扩展的域名系统 (DNS) Web 服务
+
+    -   code: vpc
+        name: Amazon VPC
+        full_name: Amazon Virtual Private Cloud (VPC)
+        category_code: cn
+        caption: 私有、隔离的云资源存储和内容交付
+#
+    -   code: cloudfront
+        name: CloudFront
+        full_name: Amazon CloudFront
+        category_code: scdn
+        caption: 是一种 Web 服务，让用户能够轻松通过全球节点网络以低延迟分配内容
+
+    -   code: s3
+        name: Amazon S3
+        full_name: Amazon Simple Storage Service (S3)
+        category_code: scdn
+        caption: Scalable Storage in the Cloud
+
+    -   code: glacier
+        name: Glacier
+        full_name: Amazon Glacier 
+        category_code: scdn
+        caption: Archive Storage in the Cloud
+
+    -   code: storagegateway
+        name: AWS Storage Gateway
+        full_name: AWS Storage Gateway
+        category_code: scdn
+        caption: Integrates On-Premises IT Environments with Cloud Storage
+#
+
+    -   code: dynamodb
+        name: DynamoDB
+        full_name: Amazon DynamoDB 
+        category_code: db
+        caption: 是完全托管的高性能 NoSQL 数据库服务，易于设置、运行和扩展
+
+    -   code: elasticache
+        name: ElastiCache
+        full_name: Amazon ElastiCache 
+        category_code: db
+        caption: 是一种 Web 服务，让用户能够在云中轻松部署、运行和扩展内存缓存
+
+    -   code: rds
+        name: RDS
+        full_name: Amazon Relational Database Service (RDS) 
+        category_code: db
+        caption: 是一种 Web 服务，让用户能够在云中轻松设置、操作和扩展关系数据库
+
+    -   code: redshift
+        name: Redshift
+        full_name: Amazon Redshift 
+        category_code: db
+        caption: Managed Petabyte-Scale Data Warehouse Service
+        is_new: true
+
+#
+    -   code: cloudformation
+        name: CloudFormation
+        full_name: Amazon CloudFormation
+        category_code: dm
+        caption: 是一种服务，可以让开发人员和企业都能轻松创建相关 AWS 资源集合并按有序和可预测的方式进行预配置
+
+    -   code: cloudwatch
+        name: CloudWatch
+        full_name: Amazon CloudWatch 
+        category_code: dm
+        caption: 是一种 Web 服务，用于监控通过 Amazon EC2 实例启动的 AWS 云资源
+
+    -   code: datapipeline
+        name: Data Pipeline
+        full_name: Amazon Data Pipeline 
+        category_code: dm
+        caption: 是一种 Web 服务，可帮助您在指定的间隔中，可靠地在不同 AWS 计算与存储服务以及内部数据源之间移动数据
+
+    -   code: elasticbeanstalk
+        name: Elastic Beanstalk
+        full_name: AWS Elastic Beanstalk 
+        category_code: dm
+        caption: 是一种 Web 服务，让用户能够在云中轻松设置、操作和扩展关系数据库
+
+    -   code: iam
+        name: IAM
+        full_name: AWS Identity and Access Management (IAM) 
+        category_code: dm
+        caption:  使您能够安全地控制用户对 AWS 服务和资源的访问权限
+
+    -   code: opsworks
+        name: OpsWorks
+        full_name: AWS OpsWorks
+        category_code: dm
+        caption: 是一个 DevOps 解决方案，可管理 AWS 云上任何规模或复杂性的应用程序
+        is_new: true
+#
+    -   code: cloudsearch
+        name: CloudSearch
+        full_name: Amazon CloudSearch
+        category_code: apps
+        caption: 是云中的一种完全托管搜索服务，让客户能够轻松地将高度可扩展的快速搜索功能集成到他们的应用程序中
+
+    -   code: elastictranscoder
+        name: Elastic Transcoder
+        full_name: Amazon Elastic Transcoder
+        category_code: apps
+        caption:  在云环境中运行视频转码
+        is_new: code
+
+    -   code: ses
+        name: SES
+        full_name: Amazon Simple Email Service (SES)
+        category_code: apps
+        caption: 是面向企业和开发人员的、高度可扩展和经济高效的批量事务处理电子邮件发送服务
+
+    -   code: sns
+        name: SNS
+        full_name: Amazon Simple Notification Service (SNS)
+        category_code: apps
+        caption: 是一种 Web 服务，让用户能够轻松设置、运行及从云中发送通知
+
+    -   code: sqs
+        name: SQS
+        full_name: Amazon Simple Queue Service (SQS)
+        category_code: apps
+        caption:  是一项快速可靠、可扩展且管理到位的队列服务
+
+    -   code: swf
+        name: SWF
+        full_name: Amazon Simple Workflow Service (SWF)
+        category_code: apps
+        caption: 是一项用于云应用程序的任务协调和状态管理服务
+# Service.create(:code => "ec2",:category_code=>"cn",:name=>"Amazon EC2",:full_name=>"Amazon Elastic Compute Cloud",
+#       :caption=>"在云中的虚拟服务器")
+# Service.create(:code => "directconnect",:category_code=>"cn",:name=>"Direct Connect",:full_name=>"AWS Direct Connect",
+#       :caption=>"专用网络连接到AWS")
+# Service.create(:code => "elasticmapreduce",:category_code=>"cn",:name=>"Elastic MapReduce",:full_name=>"Amazon Elastic MapReduce ",
+#       :caption=>"托管Hadoop框架")
+# Service.create(:code => "route53",:category_code=>"cn",:name=>"Route 53",:full_name=>"Amazon Route 53",
+#       :caption=>"高可用性和可扩展的域名系统 (DNS) Web 服务")
+# Service.create(:code => "vpc",:category_code=>"cn",:name=>"Amazon VPC",:full_name=>"Amazon Virtual Private Cloud (VPC)",
+#       :caption=>"私有、隔离的云资源存储和内容交付")

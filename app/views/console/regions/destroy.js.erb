@@ -1,0 +1,6 @@
+<% if @region.destroyed? %>
+//$("tr[data-id=<%= @region.id %>]").remove();
+$("tr[data-id=<%= @region.id %>]").fadeOut(500);
+<%else%>
+alert("fail");
+<%end%>

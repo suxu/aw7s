@@ -1,0 +1,73 @@
+<% if @service.errors.any? %>
+<div class="alert alert-block alert-danger fade in">
+<button type="button" class="close" data-dismiss="alert">×</button>
+<h4 class="alert-heading">
+  <%= pluralize(@service.errors.count, "错误") %> 服务被禁止保存
+</h4>
+<ul>
+<% @service.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+
+<% end %>
+
+<%= form_for [:console,@service],:html=>{:class=>"form-horizontal"} do |form| %>
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">所属分类:</label>
+  <div class="col-lg-3">
+     <%= collection_select(:service, :category_code, Category.all, :code, :full_name,{},{:class=>"form-control"}) %>
+
+
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">代码:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :code,:placeholder=>"代码",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">服务名称:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :name,:placeholder=>"名称",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">完整名称:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :full_name,:placeholder=>"完整名称",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">简要:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :caption,:placeholder=>"简要",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label"></label>
+  <div class="checkbox col-lg-3">
+   <label>
+    <%= form.check_box :normal %>运行正常
+    </label>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-lg-offset-2 col-lg-10">
+    <%= form.submit :"提 交",:class=>"btn btn-primary" %>
+  <%= link_to "返回",list_console_services_path %>
+  </div>
+</div>
+
+
+
+<%end%>

@@ -1,0 +1,49 @@
+#
+zones:
+    -	code: us-east-1a
+     	region_code: us-east-1
+
+    -	code: us-east-1c
+     	region_code: us-east-1
+
+    -	code: us-east-1d
+     	region_code: us-east-1
+
+    -   code: us-west-2a
+    	region_code: us-west-2
+
+    -   code: us-west-2b
+    	region_code: us-west-2
+
+    -   code: us-west-2c
+    	region_code: us-west-2
+
+# #
+# Zone.create(:code => "us-east-1a", :region_code => "us-east-1")
+# Zone.create(:code => "us-east-1c", :region_code => "us-east-1")
+# Zone.create(:code => "us-east-1d", :region_code => "us-east-1")
+# #
+# Zone.create(:code => "us-west-2a", :region_code => "us-west-2")
+# Zone.create(:code => "us-west-2b", :region_code => "us-west-2")
+# Zone.create(:code => "us-west-2c", :region_code => "us-west-2")
+# #
+# Zone.create(:code => "us-west-1a", :region_code => "us-west-1")
+# Zone.create(:code => "us-west-1c", :region_code => "us-west-1")
+# Zone.create(:code => "us-west-1d", :region_code => "us-west-1")
+# #
+# Zone.create(:code => "eu-west-1a", :region_code => "eu-west-1")
+# Zone.create(:code => "eu-west-1b", :region_code => "eu-west-1")
+# Zone.create(:code => "eu-west-1c", :region_code => "eu-west-1")
+# #
+# Zone.create(:code => "ap-southeast-1a", :region_code => "ap-southeast-1")
+# Zone.create(:code => "ap-southeast-1b", :region_code => "ap-southeast-1")
+# #
+# Zone.create(:code => "ap-northeast-1a", :region_code=>"ap-northeast-1")
+# Zone.create(:code => "ap-northeast-1b", :region_code=>"ap-northeast-1")
+# Zone.create(:code => "ap-northeast-1c", :region_code=>"ap-northeast-1")
+# #
+# Zone.create(:code => "ap-southeast-2a", :region_code => "ap-southeast-2")
+# Zone.create(:code => "ap-southeast-2b", :region_code => "ap-southeast-2")
+# #
+# Zone.create(:code => "sa-east-1a", :region_code => "sa-east-1")
+# Zone.create(:code => "sa-east-1b", :region_code => "sa-east-1")

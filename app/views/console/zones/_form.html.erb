@@ -1,0 +1,20 @@
+<%= form_for [:console,@zone], :url => {:controller => "zones",:action=>@action},:html=>{:class=>"form form-inline"} do |form| %>
+<label><%= action_name == "edit" ? "修改区域" : "新增区域" %>:</label>
+<div class="form-group">
+<label class="sr-only" for="">区域代码</label>
+<%= form.text_field :code,:placeholder=>"区域代码",:class=>"form-control" %>
+</div>
+<div class="form-group">
+<label class="sr-only" for="">备注</label>
+<%= form.text_field :remark,:placeholder=>"备注",:class=>"form-control" %>
+</div>
+<div class="checkbox">
+<label>
+  <%= form.check_box :normal %> 运行正常
+</label>
+</div>
+ <%= form.submit :"提 交",:class=>"btn btn-primary" %>
+
+<%end%>
+
+

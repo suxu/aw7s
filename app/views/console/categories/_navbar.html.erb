@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs">
+<li <%= active_class if action_name == "index" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-home"></i>类型主页'),console_categories_path%>
+</li>
+<li <%= active_class if action_name == "list" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-list"></i>类型列表'),list_console_categories_path%>
+</li>
+
+<li <%= active_class if action_name == "new" || action_name == "create" %>>
+ <%= link_to raw('<i class="glyphicon glyphicon-plus"></i>新建类型'),new_console_category_path %>
+</li>
+
+<% if @category && (action_name == "edit" || action_name == "update") %>
+<li class="active">
+<%= link_to raw('<i class="glyphicon glyphicon-edit"></i>修改类型'),edit_console_category_path(@category) %>
+</li>
+
+<%end%>
+</ul>

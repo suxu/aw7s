@@ -1,0 +1,13 @@
+<%= render :partial => "console/regions/navbar_member"%>
+
+<div class="panel panel-primary">
+<div class="panel-heading">
+  <h3 class="panel-title"><%= @region.name %></h3>
+</div>
+<div class="panel-body">
+	<%= render :partial => "form" %>
+	<hr/>
+	<%= render "table" %>
+</div>
+</div>
+

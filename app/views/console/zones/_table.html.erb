@@ -1,0 +1,36 @@
+
+	
+
+<table class="table">
+<thead>
+	<th>区域代码</th>
+	<th>所属地区</th>
+	<th>备注</th>
+	<th>创建时间</th>
+	<th>状态</th>
+	<th>操作</th>
+</thead>
+<tbody>
+<% @zones.each do |zone|%>
+<tr data-id="<%= zone.id %>">
+	<td><%= zone.code %></td>
+	<td><%= link_to zone.region.name,console_region_path(zone.region) if zone.region %></td>
+	<td><%= zone.remark || '#' %></td>
+	<td><%= zone.created_at %></td>
+	<td><%= zone.normal ? "" : "" %></td>
+	<td>
+		<div class="btn-group">
+			<button class="btn btn-small">操作</button>
+			<button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+			<ul class="dropdown-menu">
+			<li><%= link_to raw('<i class="icon-edit"></i> 修改'),edit_console_region_zone_path(@region,zone) %></li>
+			<li>
+			<%= link_to raw('<i class="icon-trash"></i> 删除'),console_region_zone_path(@region,zone),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %></li>
+			</ul>
+		</div>
+	</td>
+</tr>
+<%end%>
+</tbody>
+</table>
+
