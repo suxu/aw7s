@@ -1,35 +1,14 @@
-<!--  <ul class="nav navbar-nav">
-<li class="active"><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li class="dropdown-header">Nav header</li>
-    <li><a href="#">Separated link</a></li>
-    <li><a href="#">One more separated link</a></li>
-  </ul>
-</li>
-</ul>
- -->
-
 <ul class="nav navbar-nav">
-<li><a href="/">  <span class="glyphicon glyphicon-home"></span> Home</a></li>
-
-
+<li><%= link_to raw('<span class="glyphicon glyphicon-home"></span> Home'),console_path %></li>
 <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">服务管理
-    <b class="caret"></b></a>
-    <ul class="dropdown-menu">
-    <li class="dropdown-header">Service</li>
-    <li><%= link_to "服务首页",console_services_path %></li>
-    <li><%= link_to "服务列表",list_console_services_path %></li>
-    <li><%= link_to "新增服务",new_console_service_path %></li>
-    </ul>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">服务管理
+<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="dropdown-header">Service</li>
+<li><%= link_to "服务首页",console_services_path %></li>
+<li><%= link_to "服务列表",list_console_services_path %></li>
+<li><%= link_to "新增服务",new_console_service_path %></li>
+</ul>
 </li>
 
 
@@ -56,24 +35,28 @@
     </ul>
 </li>
 
-<!-- 
-
-<li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本
-    <b class="caret"></b></a>
-</li>
-
- -->
-
-
-
 
 
 
 </ul>
 
 <ul class="nav navbar-nav navbar-right">
-<li><a href="../navbar/">Default</a></li>
-<li><a href="../navbar-static-top/">Static top</a></li>
-<li class="active"><a href="./">Fixed top</a></li>
+
+<% unless signed_in? %>
+<li>
+    <%= link_to "登录",new_console_session_path %>
+</li>
+<%else%>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-user"></span> <%= current_player.name %>
+    <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li>
+    <%= link_to raw('<span class="glyphicon glyphicon-off"></span> 注销') ,destroy_console_session_path,:method=>:delete,:confirm=>"您是否要注销？" %>
+    </li>
+    </ul>
+</li>
+<%end%>
+
 </ul>

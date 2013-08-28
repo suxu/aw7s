@@ -1,15 +1,18 @@
 #encoding: utf-8
+# suxu
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongscodee the db with db:setup).
 #
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-
+#
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+#   data_file = File.join(Rails.root, 'db','seeds', 'regions.yml')
 
 p '-------------Load YML----------------'
-data_file = File.join(Rails.root, 'db','seeds', 'regions.yml')
+
 data = YAML::load_file(File.join(Rails.root, 'db', 'data.yml'))
 p '-------------Clear Data----------------'
 Region.destroy_all
@@ -17,23 +20,26 @@ Zone.destroy_all
 Category.destroy_all
 Service.destroy_all
 #
-p '-------------Create Data----------------'
+p '-------------Create Data By YML------------'
 Region.create(data["regions"])
 Zone.create(data["zones"])
 Category.create(data["categories"])
 Service.create(data["services"])
 
+p '-------------Init Covering-----------------'
 regions = Region.all
 services = Service.all
-p '-------------Init Covering----------------'
 services.each do |s|
 	regions.each do |reg|
 		Covering.create(:service_code=>s.code,:region_code=>reg.code)
 	end
 end
+p '-------------Init Player------------------'
+Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078")
+
 p '-------------Seed  End--------------------'
 
-#Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078")
+
 
 # Region.create(:code => "us-east-1",:name => "美国东部（弗吉尼亚北部）",:en_name => "US East (N. Virginia)")
 # Region.create(:code => "us-west-2",:name => "美国西部（俄勒冈）",:en_name => "US West (Oregon)")

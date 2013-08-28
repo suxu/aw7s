@@ -28,7 +28,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'will_paginate', '~> 3.0' #pages
 
-gem 'will_paginate', '~> 3.0' #deploy
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -49,4 +48,4 @@ end
 
 # gem 'mongoid', '~> 3.1.4'
 
-gem "devise", "~> 3.0.0.rc"
+gem "devise", "~> 3.0.3"
