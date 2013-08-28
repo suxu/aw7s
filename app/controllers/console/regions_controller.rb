@@ -2,7 +2,7 @@ module Console
 class RegionsController < AppController
 
 	#
-	load_and_authorize_resource :class => "Region"
+	load_and_authorize_resource :class => "Region",except: [:create,:update]
 
 	before_action :require_region, :only=>[:show,:edit,:update,:destroy]
 

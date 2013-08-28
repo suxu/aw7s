@@ -1,7 +1,7 @@
 module Console
 class ZonesController < AppController
 
-	load_and_authorize_resource :class => "Zone"
+	load_and_authorize_resource :class => "Zone",except: [:create,:update]
 
 	before_action :require_region
 	before_action :require_region_zones #,:only=>[:index,:edit]

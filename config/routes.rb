@@ -2,14 +2,14 @@ Aw7s::Application.routes.draw do
 
   #root :to => 'home#show'
 
+  root :to => 'console/home#show'
+
   devise_for :players, :path => "/", skip: [:sessions,:confirmations, :passwords,:registrations]
 
   devise_scope :player do
   get   'console/sign_in',  to: 'console/sessions#new',      as: :new_console_session
   post  'console/sign_in',     to: 'console/sessions#create',     as: :console_session
   delete   'console/sign_out', to: 'console/sessions#destroy',     as: :destroy_console_session
-   
-    
   end
 
   namespace :console do

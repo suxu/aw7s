@@ -1,7 +1,7 @@
 module Console
 class CategoriesController < AppController
 
-	load_and_authorize_resource :class => "Category"
+	load_and_authorize_resource :class => "Category", except: [:create,:update]
 
 	before_action :require_category,:only => [:show,:edit,:update,:destroy]
 

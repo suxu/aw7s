@@ -2,7 +2,7 @@ module Console
 
 class PlayersController < AppController
 
-	load_and_authorize_resource :class => "Player"
+	load_and_authorize_resource :class => "Player",except: [:create,:update]
 
 	def index
 		
