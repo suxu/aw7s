@@ -2,7 +2,7 @@ module Console
 
 class ServicesController < AppController
 
-	load_and_authorize_resource :class => "Service"
+	load_and_authorize_resource :class => "Service",except: [:create,:update]
 
 	def home
 
