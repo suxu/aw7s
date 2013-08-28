@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrap">
 
-<div class="navbar navbar-default navbar-static-top">
+<div class="navbar navbar-default navbar-static-bottom">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Aw7s</a>
@@ -19,9 +20,19 @@
   </div>
 </div>
 
-
-<div class="container">
+<div class="container" >
 <%= yield %>
+</div>
+</div>
+
+
+<div id="footer">
+  <div class="container">
+    <p class="text-center">
+        <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services™</a></br>
+        <a href="https://twitter.com/hisuxu" target="_blank">@hisuxu</a>
+    </p>
+  </div>
 </div>
 
 

@@ -12,7 +12,7 @@
 <% @services.each do |service|%>
 <tr data-id="<%= service.id %>">
 <td><%= link_to service.name,service.aws_url,:target=>"_blank" %> </td>
-<td><%= service.caption %></td>
+<td><%=  truncate(service.caption,:length => 50) %></td>
 <td><%= service.category.name %></td>
 <td>
 	<%= normal_tag (service.normal)%>

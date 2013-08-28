@@ -33,7 +33,6 @@ Aw7s::Application.routes.draw do
     end
     resources :services do 
       get :list , :on => :collection
-      get :regions, :on => :member
       get :coverings, :on => :member
     end
     resources :players do 

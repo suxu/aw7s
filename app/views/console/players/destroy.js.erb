@@ -1,0 +1,5 @@
+<% if @player.destroyed? %>
+$("tr[data-id=<%= @player.id %>]").fadeOut(500);
+<%else%>
+alert("fail");
+<%end%>

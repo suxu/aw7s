@@ -35,7 +35,7 @@ services.each do |s|
 	end
 end
 p '-------------Init Player------------------'
-Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078")
+Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078",:is_master=>true)
 
 p '-------------Seed  End--------------------'
 

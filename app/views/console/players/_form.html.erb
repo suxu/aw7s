@@ -1,0 +1,70 @@
+<% if @player.errors.any? %>
+<div class="alert alert-block alert-danger fade in">
+<button type="button" class="close" data-dismiss="alert">×</button>
+<h4 class="alert-heading">
+  <%= pluralize(@player.errors.count, "错误") %> 玩家被禁止保存
+</h4>
+<ul>
+<% @player.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+
+
+
+<%= form_for [:console,@player],:html=>{:class=>"form form-horizontal",:role=>"form",:id=>"player-form"} do |form| %>
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">姓名:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :name,:placeholder=>"姓名",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">邮箱:</label>
+  <div class="col-lg-3">
+     <%= form.text_field :email,:placeholder=>"邮箱",:class=>"form-control",:required=>"required" %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">密码:</label>
+  <div class="col-lg-3">
+     <%= form.password_field :password,:placeholder=>"密码",:class=>"form-control",:required=>"required",minlength: 8 %>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">确认密码:</label>
+  <div class="col-lg-3">
+     <%= form.password_field :password_confirmation,:placeholder=>"确认密码",:class=>"form-control",:required=>"required",equalTo: '#player_password' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">联系电话:</label>
+  <div class="col-lg-3">
+    <%= form.text_field :phone,:placeholder=>"联系电话",:class=>"form-control" %>
+  </div>
+</div>
+<div class="form-group">
+  <label for="" class="col-lg-2 control-label">正常运行:</label>
+  <div class="checkbox col-lg-3">
+   <label>
+    <%= form.check_box :normal %> 状态正常
+    </label>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-lg-offset-2 col-lg-10">
+     <%= form.submit :"提 交",:class=>"btn btn-primary" %>
+     <%= link_to "返回列表", list_console_players_path %>
+  </div>
+</div>
+<%end%>
+<script type="text/javascript">
+$("#player-form").validate();
+</script>

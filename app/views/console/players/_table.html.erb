@@ -1,0 +1,35 @@
+<table class="table">
+<thead>
+<tr>
+	<td>姓名</td>
+	<td>邮箱</td>
+	<td>联系电话</td>
+	<td>Master</td>
+	<td>创建时间</td>
+	<td>操作</td>
+</tr>
+</thead>
+<tbody>
+<% @players.each do |player| %>
+<tr data-id="<%=player.id%>">
+<td><%= player.name %></td>
+<td><%= player.email %></td>
+<td><%= player.phone %></td>
+<td><%= player.is_master ? "Yes" : "No" %></td>
+<td><%= player.created_at %></td>
+<td>
+<div class="btn-group btn-group-sm">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+操 作 <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li><%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_player_path(player) %></li>
+<li>
+<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_player_path(player),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %></li>
+</ul>
+</div>
+</td>
+</tr>
+<%end%>
+</tbody>
+</table>
