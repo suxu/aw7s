@@ -9,9 +9,16 @@ class AppController < ApplicationController
 
 	layout 'console'
 
-	helper_method :current_master
+	helper_method :current_user,:current_master
+
+	rescue_from CanCan::AccessDenied do |exception|
+    	redirect_to  request.referer, :alert => 'Sorry 您没有权限执行这个操作,只有Master可以!'
+  	end
 
 	private
+	def current_user
+		return current_player
+	end
 	def current_master
 		return current_player
 	end

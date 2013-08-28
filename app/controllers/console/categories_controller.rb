@@ -1,6 +1,8 @@
 module Console
 class CategoriesController < AppController
 
+	load_and_authorize_resource :class => "Category"
+
 	before_action :require_category,:only => [:show,:edit,:update,:destroy]
 
 	def index

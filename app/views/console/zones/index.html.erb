@@ -5,7 +5,9 @@
   <h3 class="panel-title"><%= @region.name %></h3>
 </div>
 <div class="panel-body">
+	<% if can? :manage, @region %>
 	<%= render :partial => "form" %>
+	<%end%>
 	<hr/>
 	<%= render "table" %>
 </div>

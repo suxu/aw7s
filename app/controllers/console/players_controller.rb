@@ -2,6 +2,8 @@ module Console
 
 class PlayersController < AppController
 
+	load_and_authorize_resource :class => "Player"
+
 	def index
 		
 	end

@@ -2,6 +2,8 @@ module Console
 
 class ServicesController < AppController
 
+	load_and_authorize_resource :class => "Service"
+
 	def home
 
 	end

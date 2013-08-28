@@ -1,6 +1,9 @@
 module Console
 class RegionsController < AppController
 
+	#
+	load_and_authorize_resource :class => "Region"
+
 	before_action :require_region, :only=>[:show,:edit,:update,:destroy]
 
 	def home
