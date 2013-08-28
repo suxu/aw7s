@@ -59,20 +59,17 @@ ActiveRecord::Schema.define(version: 20130827144745) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name",                   limit: 32,                 null: false
-    t.string   "phone",                  limit: 20,                 null: false
+    t.string   "phone",                  limit: 20
     t.string   "avatar",                 limit: 64
     t.integer  "gender",                            default: 1,     null: false
     t.integer  "level",                             default: 0,     null: false
-    t.integer  "experience",                        default: 0,     null: false
-    t.string   "qq",                     limit: 13
-    t.string   "taobao",                 limit: 64
     t.boolean  "is_master",                         default: false, null: false
     t.boolean  "is_super",                          default: false, null: false
-    t.integer  "master_no",                         default: 0,     null: false
     t.boolean  "normal",                            default: true,  null: false
   end
 
   add_index "players", ["email"], name: "index_players_on_email", unique: true, using: :btree
+  add_index "players", ["phone"], name: "index_players_on_phone", unique: true, using: :btree
   add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true, using: :btree
 
   create_table "regions", force: true do |t|
