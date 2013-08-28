@@ -9,8 +9,8 @@
 
 <%= form_for(@player, :as => resource_name, :url => console_session_path,:html=>{:class=>"form-signin",:id=>"signin-form"}) do |f| %>
 	<h3 class="form-signin-heading">请输入登录信息</h3>
-	<%= f.email_field :email, :autofocus => true,:class=>"form-control",:placeholder=>"Email",:required=>"required" %><br/>
-	<%= f.password_field :password,:class=>"form-control",:placeholder=>"Password",:required=>"required" %>
+	<%= f.email_field :email, :autofocus => true,:class=>"form-control",:placeholder=>"邮箱",:required=>"required" %>
+	<%= f.password_field :password,:class=>"form-control",:placeholder=>"密码",:required=>"required" %>
 	<label class="checkbox">
 	<%= f.check_box :remember_me %> <%= f.label :'记住我' %>
 	</label>
