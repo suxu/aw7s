@@ -6,6 +6,9 @@ class Player < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
    
 
+  validates_uniqueness_of :email, {:allow_nil => true, :message => '指定的电子邮箱帐号已经被其他用户使用'}
+  validates_length_of :email, {:allow_nil => true, :minimum => 5, :message => '指定的电子邮箱帐号太短'}
+
   def phone_str
     return "" if self.phone.blank? || self.phone.length < 11
     str = self.phone
