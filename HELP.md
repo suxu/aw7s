@@ -17,3 +17,18 @@
 git remote add heroku git@heroku.com:aw7s.git
 
 vpn:dylanv587
+
+
+heroku login
+
+ input email & password
+
+heroku create -app aw7s
+ 
+ git remote add heroku git@heroku.com:aw7s.git
+
+heroku run rake db:migrate --app aw7s
+
+heroku run rake assets:precompile --app aw7s
+
+heroku run rake db:seed --app aw7s
