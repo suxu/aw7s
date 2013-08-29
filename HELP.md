@@ -27,6 +27,9 @@ heroku create -app aw7s
  
  git remote add heroku git@heroku.com:aw7s.git
 
+git pull heroku master
+	
+
 heroku run rake db:migrate --app aw7s
 
 heroku run rake assets:precompile --app aw7s

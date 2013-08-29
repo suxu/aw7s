@@ -1,0 +1,6 @@
+I, [2013-08-29T11:21:41.736852 #6899]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-08-29 11:21:41 +0800
+I, [2013-08-29T11:21:42.452027 #6899]  INFO -- : Processing by Console::HomeController#show as HTML
+I, [2013-08-29T11:21:42.508699 #6899]  INFO -- :   Rendered console/home/show.html.erb within layouts/console (1.8ms)
+I, [2013-08-29T11:21:42.694947 #6899]  INFO -- :   Rendered console/_navbar.html.erb (173.3ms)
+I, [2013-08-29T11:21:42.695956 #6899]  INFO -- : Completed 200 OK in 243ms (Views: 152.0ms | ActiveRecord: 57.9ms)
+I, [2013-08-29T11:21:43.485121 #6899]  INFO -- : Started GET "/assets/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-08-29 11:21:43 +0800
