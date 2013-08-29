@@ -1,5 +1,5 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
+#source 'http://ruby.taobao.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'will_paginate', '~> 3.0' #pages
 gem 'devise', '~> 3.0.3'
 gem 'cancan', '~> 1.6.10' # https://github.com/ryanb/cancan
-
+gem "heroku", "~> 2.40.0"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -1,8 +1,7 @@
+#
 module Console
 class AppController < ApplicationController
 
-	#protect_from_forgery
-	#
 	#before_filter :authenticate_player!
 
 	before_filter :require_player
@@ -11,6 +10,7 @@ class AppController < ApplicationController
 
 	helper_method :current_user,:current_master
 
+	#权限错误提示
 	rescue_from CanCan::AccessDenied do |exception|
     	redirect_to  request.referer, :alert => 'Sorry 您没有权限执行这个操作,只有Master可以!'
   	end
@@ -20,7 +20,7 @@ class AppController < ApplicationController
 		return current_player
 	end
 	def current_master
-		return current_player
+		return current_player if current_player && current_player.is_master
 	end
 
 	def require_player
