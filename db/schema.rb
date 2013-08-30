@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827144745) do
+ActiveRecord::Schema.define(version: 20130830025739) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title",        limit: 128,                 null: false
+    t.string   "url",                                      null: false
+    t.string   "domain",       limit: 128,                 null: false
+    t.string   "keywords"
+    t.string   "summary"
+    t.integer  "player_id",                default: 0,     null: false
+    t.string   "player_name",                              null: false
+    t.boolean  "original",                 default: false, null: false
+    t.integer  "read_count",               default: 0,     null: false
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "code",           limit: 64,                null: false
@@ -102,6 +117,16 @@ ActiveRecord::Schema.define(version: 20130827144745) do
   end
 
   add_index "services", ["code"], name: "index_services_on_code", unique: true, using: :btree
+
+  create_table "sites", force: true do |t|
+    t.string   "name",         limit: 128,             null: false
+    t.string   "url",          limit: 128,             null: false
+    t.string   "domain",       limit: 128,             null: false
+    t.string   "favicon"
+    t.integer  "topics_count",             default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "zones", force: true do |t|
     t.string   "code",        limit: 32,                 null: false

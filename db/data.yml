@@ -256,13 +256,3 @@ services:
         full_name: Amazon Simple Workflow Service (SWF)
         category_code: apps
         caption: 是一项用于云应用程序的任务协调和状态管理服务
-# Service.create(:code => "ec2",:category_code=>"cn",:name=>"Amazon EC2",:full_name=>"Amazon Elastic Compute Cloud",
-#       :caption=>"在云中的虚拟服务器")
-# Service.create(:code => "directconnect",:category_code=>"cn",:name=>"Direct Connect",:full_name=>"AWS Direct Connect",
-#       :caption=>"专用网络连接到AWS")
-# Service.create(:code => "elasticmapreduce",:category_code=>"cn",:name=>"Elastic MapReduce",:full_name=>"Amazon Elastic MapReduce ",
-#       :caption=>"托管Hadoop框架")
-# Service.create(:code => "route53",:category_code=>"cn",:name=>"Route 53",:full_name=>"Amazon Route 53",
-#       :caption=>"高可用性和可扩展的域名系统 (DNS) Web 服务")
-# Service.create(:code => "vpc",:category_code=>"cn",:name=>"Amazon VPC",:full_name=>"Amazon Virtual Private Cloud (VPC)",
-#       :caption=>"私有、隔离的云资源存储和内容交付")
