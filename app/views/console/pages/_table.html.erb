@@ -20,6 +20,7 @@
 <%= link_to page.title,page.url,:title=>page.url,:target=>"_blank" %>
 <%= raw('<span class="label label-danger" title="Banner">B</span>') if page.is_banner %>
 <%= raw('<span class="label label-warning" title="原创">O</span>') if page.original %>
+<%= raw('<span class="label label-info" title="案例">C</span>') if page.is_case %>
 </td>
 <td><%= page.tag_list %></td>
 <td><%= page.domain %></td>
