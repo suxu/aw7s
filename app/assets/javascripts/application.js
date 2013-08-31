@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require jquery.ui.core
+//= require jquery.ui.datepicker
+//= require jquery.ui.datepicker-zh-CN
 //= require angular.min
 //= require jquery.validate
 //= require jquery.validate.messages_zh

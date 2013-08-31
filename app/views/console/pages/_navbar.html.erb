@@ -1,5 +1,5 @@
 <ul class="nav nav-tabs">
-<li <%= active_class if action_name == "index" %>>
+<li <%= active_class if controller_name == "pages" && action_name == "index" %>>
  <%= link_to raw('<span class="glyphicon glyphicon-home"></span> 页面主页'),console_pages_path%>
 </li>
 <li <%= active_class if action_name == "list" %>>
@@ -9,5 +9,9 @@
  <%= link_to raw('<span class="glyphicon glyphicon-plus"></span> 新建页面'),new_console_page_path %>
 </li>
 
+
+<li <%= active_class if controller_name == "sites" && action_name == "index" %>>
+ <%= link_to raw('<span class="glyphicon glyphicon-globe"></span> 网站管理'),console_sites_path%>
+</li>
 
 </ul>

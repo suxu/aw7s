@@ -1,12 +1,27 @@
 class Page < ActiveRecord::Base
 
-	acts_as_taggable
+	
 
 	belongs_to :site, :class_name => 'Site' ,
 			   :primary_key => "domain", :foreign_key => "domain",:counter_cache => true
 
+	acts_as_taggable
 
 	validates_uniqueness_of :url
+
+	default_scope { order('published_at DESC') }
+
+	# scope :banner_scope, -> { where(is_banner: true).where.not(img_url: '') }
+
+	def self.banner_scope 
+		where(:is_banner=>true).where.not(:img_url =>  '').where.not(:img_url =>nil)
+	end
+
+	def self.original_scope
+		where(:original => true)
+	end
+
+	
 
 	#
 	before_save do

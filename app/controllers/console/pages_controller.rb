@@ -14,7 +14,7 @@ class PagesController < AppController
 	end
 
 	def new
-		@page = Page.new
+		@page = Page.new(:published_at=>Date.today)
 	end
 
 	def create

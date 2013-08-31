@@ -25,15 +25,16 @@
 <div class="form-group">
 <label for="" class="col-lg-2 control-label"></label>
 <div class="col-lg-5">
-
 <label class="checkbox-inline" title="Banner">
   <%= form.check_box :is_banner %>Banner
 </label>
 <label class="checkbox-inline" title="原创">
   <%= form.check_box :original %>Original
 </label>
-
-
+<label class="checkbox-inline" title="Case">
+  <%= form.check_box :is_case %>Case
+</label>
+<span class="help-block">Banner广告 | Original原创 | Case案例</span>
 </div>
 </div>
 
@@ -61,7 +62,7 @@
 <div class="form-group">
 <label for="" class="col-lg-2 control-label">发布日期:</label>
 <div class="col-lg-3">
- <%= form.text_field :published_at,:placeholder=>"发布日期",:class=>"form-control" %>
+ <%= form.text_field :published_at,:placeholder=>"发布日期",:class=>"form-control",:id=>"published_at" %>
 </div>
 </div>
 
@@ -71,11 +72,6 @@
  <%= form.text_area :summary,:placeholder=>"内容简要",:class=>"form-control" %>
 </div>
 </div>
-
-
-
-
-
 
 <div class="form-group">
   <label for="" class="col-lg-2 control-label"></label>
@@ -93,5 +89,11 @@
 </div>
 <%end%>
 <script type="text/javascript">
-$("#page-form").validate();
+
+$(function(){
+  $("#published_at").datepicker({dateFormat:"yy-mm-dd",maxDate:new Date()});
+  $("#page-form").validate();
+});
+
+
 </script>
