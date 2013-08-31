@@ -1,0 +1,13 @@
+<ul class="nav nav-tabs">
+<li <%= active_class if action_name == "index" %>>
+ <%= link_to raw('<span class="glyphicon glyphicon-home"></span> 页面主页'),console_pages_path%>
+</li>
+<li <%= active_class if action_name == "list" %>>
+ <%= link_to raw('<span class="glyphicon glyphicon-list"></span> 页面列表'),list_console_pages_path%>
+</li>
+<li <%= active_class if action_name == "new" %>>
+ <%= link_to raw('<span class="glyphicon glyphicon-plus"></span> 新建页面'),new_console_page_path %>
+</li>
+
+
+</ul>

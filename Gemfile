@@ -1,5 +1,7 @@
-#source 'https://rubygems.org'
+#source 'https://rubygems.org'  
 source 'http://ruby.taobao.org'
+
+# heroku set ruby version
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -7,7 +9,6 @@ gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
-
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,10 +30,21 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'will_paginate', '~> 3.0' #pages
+
+# https://github.com/mislav/will_paginate
+gem 'will_paginate', '~> 3.0' 
+
+# https://github.com/plataformatec/devise
 gem 'devise', '~> 3.0.3'
-gem 'cancan', '~> 1.6.10' # https://github.com/ryanb/cancan
-gem "heroku", "~> 2.40.0"
+
+# https://github.com/ryanb/cancan
+gem 'cancan', '~> 1.6.10' 
+
+# https://github.com/heroku/heroku
+gem 'heroku', '~> 2.40.0'
+
+# https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on', '~> 2.4.1' 
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,6 +52,7 @@ group :doc do
 end
 
 group :production do
+ # Use postgresql as the database for Active Record
   gem 'pg'
 end
 

@@ -46,11 +46,14 @@ ActiveRecord::Schema.define(version: 20130831033318) do
     t.boolean  "original",                 default: false, null: false
     t.integer  "read_count",               default: 0,     null: false
     t.boolean  "is_banner",                default: false, null: false
+    t.string   "img_url"
     t.boolean  "normal",                   default: true,  null: false
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pages", ["url"], name: "index_pages_on_url", unique: true, using: :btree
 
   create_table "pings", force: true do |t|
     t.string   "region_code", limit: 32,              null: false
@@ -130,6 +133,9 @@ ActiveRecord::Schema.define(version: 20130831033318) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sites", ["domain"], name: "index_sites_on_domain", unique: true, using: :btree
+  add_index "sites", ["url"], name: "index_sites_on_url", unique: true, using: :btree
 
   create_table "zones", force: true do |t|
     t.string   "code",        limit: 32,                 null: false

@@ -9,5 +9,8 @@ class CreateSites < ActiveRecord::Migration
       t.integer :pages_count, :null => false, :default => 0
       t.timestamps
     end
+
+    add_index :sites, :url,    unique: true
+    add_index :sites, :domain, unique: true
   end
 end

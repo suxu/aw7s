@@ -42,6 +42,8 @@ class SitesController < AppController
 
 	def destroy
 		@site = Site.find_by_id(params[:id])
+		return render :js =>'alert("没有这个网站!");' unless @site
+		@site.destroy
 	end
 
 	

@@ -12,13 +12,14 @@
 #   data_file = File.join(Rails.root, 'db','seeds', 'regions.yml')
 
 p '-------------Load YML----------------'
-
 data = YAML::load_file(File.join(Rails.root, 'db', 'data.yml'))
+
 p '-------------Clear Data----------------'
 Region.destroy_all
 Zone.destroy_all
 Category.destroy_all
 Service.destroy_all
+
 #
 p '-------------Create Data By YML------------'
 Region.create(data["regions"])
@@ -34,8 +35,11 @@ services.each do |s|
 		Covering.create(:service_code=>s.code,:region_code=>reg.code)
 	end
 end
-p '-------------Init Player------------------'
+
+p '-------------Init Master--------------------'
 Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078",:is_master=>true)
+
+p '-------------Init Pages---------------------'
 
 p '-------------Seed  End--------------------'
 

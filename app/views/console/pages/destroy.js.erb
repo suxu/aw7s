@@ -1,0 +1,5 @@
+<% if @page.destroyed? %>
+$("tr[data-id=<%= @page.id %>]").fadeOut(500);
+<%else%>
+alert("fail");
+<%end%>

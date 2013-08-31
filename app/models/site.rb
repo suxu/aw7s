@@ -1,6 +1,6 @@
 class Site < ActiveRecord::Base
 
-	validates_uniqueness_of :domain
+	validates_uniqueness_of :domain,:url
 
 	before_save :set_domain
 

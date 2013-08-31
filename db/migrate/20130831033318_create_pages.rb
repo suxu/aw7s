@@ -11,9 +11,13 @@ class CreatePages < ActiveRecord::Migration
       t.boolean :original,		:null => false, :default => false
       t.integer :read_count,	:null => false,	:default => 0
       t.boolean :is_banner,		:null => false,	:default => false
+      t.string  :img_url,     :null => true
       t.boolean :normal,     :null => false, :default => true
       t.datetime :published_at,	:null => true
       t.timestamps
     end
+
+    add_index :pages, :url,    unique: true
+  
   end
 end
