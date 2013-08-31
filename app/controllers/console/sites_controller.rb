@@ -13,6 +13,7 @@ class SitesController < AppController
 
 	def new
 		@site = Site.new
+		render :layout=>nil
 	end
 
 	def create
@@ -26,9 +27,7 @@ class SitesController < AppController
 
 	def edit
 		@site = Site.find_by_id(params[:id])
-		@sites = Site.all
-		@action = "update"
-		render :template => "console/sites/index" 
+		render :layout=>nil
 	end
 
 	def update

@@ -1,0 +1,3 @@
+$("#siteModal").remove();
+$("body").append('<%= escape_javascript render :partial => "dialog_form",  :locals => {:title=> "修改网站",:action=>"update"}%>');
+//$('#siteModal').modal({remote:url,show:true});

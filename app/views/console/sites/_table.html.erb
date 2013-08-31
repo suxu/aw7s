@@ -1,12 +1,22 @@
 <table class="table">
 <thead>
 <tr>
+<td colspan="5">
+
+</td>
+<td colspan="" class="text-right">
+<a class="btn btn-primary" data-toggle="modal" data-target="#siteModal" href="<%= new_console_site_path%>">
+	添加网站
+</a>
+</td>
+</tr>
+<tr>
 	<td>名称</td>
 	<td>URL</td>
 	<td>域名</td>
 	<td>文章数量</td>
 	<td>状态</td>
-	<td>操作</td>
+	<td class="text-right">操作</td>
 </tr>
 </thead>
 <tbody>
@@ -17,14 +27,14 @@
 <td><%= site.domain %></td>
 <td><%= site.pages_count %></td>
 <td><%= site.normal ? "Yes" : "No" %></td>
-<td>
-<div class="btn-group btn-group-sm">
+<td class="text-right">
+<div class="btn-group btn-group-sm text-left">
 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 	操 作 <span class="caret"></span>
 </button>
 <ul class="dropdown-menu" role="menu">
 <li>
-	<%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_site_path(site) %>
+	<%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_site_path(site),:'data-toggle'=>"modal", :'data-target'=>"#siteModal#{site.id}" %>
 </li>
 <% if can? :destroy, site %>
 <li>
@@ -32,6 +42,8 @@
 </li>
 <%end%>
 </ul>
+</div>
+<div class="modal fade text-left" id="siteModal<%= site.id %>" tabindex="-1" role="dialog"  >
 </div>
 </td>
 </tr>

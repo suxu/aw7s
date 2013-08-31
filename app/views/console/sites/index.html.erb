@@ -4,8 +4,25 @@
   <h3 class="panel-title">网站管理</h3>
 </div>
 <div class="panel-body">
-	<%= render :partial => "form" %>
-	<hr/>
-	<%= render "table" %>
+<%= render "table" %>
 </div>
 </div>
+
+<!-- modal -->
+<div class="modal fade" id="siteModal" tabindex="-1" role="dialog"  >
+</div>
+<!-- /.modal -->
+
+<script type="text/javascript">
+// $(function(){
+// 	$('#siteModal').on('hidden.bs.modal', function () {
+//   		//$('#siteModal').modal('destroy');
+//   		//$('#site-dialog').remove(); //destroy();
+// 	});
+// });
+
+// function call_dialog(url){
+// 	$('#siteModal').modal({remote:url,show:true});
+// 	return false;
+// }
+</script>
