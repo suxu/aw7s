@@ -37,7 +37,16 @@ Aw7s::Application.routes.draw do
       get :list , :on => :collection
       get :coverings, :on => :member
     end
+    #
     resources :players do 
+      collection do
+        get :list
+      end
+    end
+    #
+    resources :sites
+    #
+    resources :pages do 
       collection do
         get :list
       end

@@ -1,0 +1,18 @@
+<%= form_for [:console,@site], :url => {:controller => "sites",:action=>@action},:html=>{:class=>"form form-inline"} do |form| %>
+<label><%= action_name == "edit" ? "修改网站" : "新增网站" %>:</label>
+<div class="form-group">
+<label class="sr-only" for="">网站名称</label>
+<%= form.text_field :name,:placeholder=>"网站名称",:class=>"form-control",:required=>"required"  %>
+</div>
+<div class="form-group">
+<label class="sr-only" for="">URL</label>
+<%= form.url_field :url,:placeholder=>"url",:class=>"form-control",:required=>"required"  %>
+</div>
+<div class="checkbox">
+<label>
+  <%= form.check_box :normal %>状态正常
+</label>
+</div>
+ <%= form.submit :"提 交",:class=>"btn btn-primary" %>
+<%end%>
+

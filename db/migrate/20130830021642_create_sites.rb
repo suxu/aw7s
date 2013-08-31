@@ -5,7 +5,8 @@ class CreateSites < ActiveRecord::Migration
       t.string :url,		     :null => false, :limit => 128
       t.string :domain,		   :null => false,	:limit => 128
       t.string :favicon,	   :null => true
-      t.integer :topics_count, :null => false, :default => 0
+      t.boolean :normal,     :null => false, :default => true
+      t.integer :pages_count, :null => false, :default => 0
       t.timestamps
     end
   end

@@ -1,0 +1,40 @@
+<table class="table">
+<thead>
+<tr>
+	<td>名称</td>
+	<td>URL</td>
+	<td>域名</td>
+	<td>文章数量</td>
+	<td>状态</td>
+	<td>操作</td>
+</tr>
+</thead>
+<tbody>
+<% @sites.each do |site|%>
+<tr>
+<td><%= site.name %></td>
+<td><%= link_to site.url,site.url,:target=>"_blank" %></td>
+<td><%= site.domain %></td>
+<td><%= site.pages_count %></td>
+<td><%= site.normal ? "Yes" : "No" %></td>
+<td>
+<div class="btn-group btn-group-sm">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+	操 作 <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li>
+	<%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_site_path(site) %>
+</li>
+<% if can? :destroy, site %>
+<li>
+<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_site_path(site),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %>
+</li>
+<%end%>
+</ul>
+</div>
+</td>
+</tr>
+<%end%>
+</tbody>
+</table>
