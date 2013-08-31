@@ -18,7 +18,8 @@ class PagesController < AppController
 	end
 
 	def create
-		@page = Page.new(params.require(:page).permit(:title,:url,:img_url,:keywords,:summary,:original,:is_banner,:published_at))
+		@page = Page.new(params.require(:page).permit(:title,:url,:img_url,:summary,:original,:is_banner,:published_at)) 
+		@page.tag_list = params.require(:page).permit(:tags)[:tags]
 		@page.player_id = current_player.id
 		@page.player_name = current_player.name
 		if @page.save

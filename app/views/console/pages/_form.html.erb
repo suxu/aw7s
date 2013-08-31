@@ -1,3 +1,5 @@
+<%= @page.errors.full_messages %>
+
 <%= form_for [:console,@page],:html=>{:class=>"form form-horizontal",:role=>"form",:id=>"page-form"} do |form| %>
 <div class="form-group">
   <label for="" class="col-lg-2 control-label">页面标题:</label>
@@ -22,7 +24,7 @@
 <div class="form-group">
   <label for="" class="col-lg-2 control-label">关键字:</label>
   <div class="col-lg-3">
-     <%= form.text_field :keywords,:placeholder=>"关键字",:class=>"form-control",:required=>"required",:minlength=>5 %>
+     <%= form.text_field :tags,:placeholder=>"关键字",:value=>@page.tag_list,:class=>"form-control",:required=>"required",:minlength=>5 %>
   </div>
 </div>
 
