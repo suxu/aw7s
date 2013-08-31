@@ -1,22 +1,30 @@
 <table class="table">
+
+
 <thead>
 <tr>
 	<td>标题</td>
-	<td>URL</td>
-	<td>所属网站</td>
 	<td>Tags</td>
-	<td>发布时间</td>
+	<td>所属网站</td>
+	<td>发布日期</td>
+	<td>发布人</td>
 	<td>操作</td>
 </tr>
 </thead>
+
+
 <tbody>
 <% @pages.each do |page|%>
 <tr data-id="<%= page.id %>">
-<td><%= link_to page.title,page.url,:target=>"_blank" %></td>
-<td><%= page.url %></td>
-<td><%= page.domain %></td>
+<td >
+<%= link_to page.title,page.url,:title=>page.url,:target=>"_blank" %>
+<%= raw('<span class="label label-danger" title="Banner">B</span>') if page.is_banner %>
+<%= raw('<span class="label label-warning" title="原创">O</span>') if page.original %>
+</td>
 <td><%= page.tag_list %></td>
-<td><%= page.title %></td>
+<td><%= page.domain %></td>
+<td><%= page.published_at %></td>
+<td><%= page.player_name %></td>
 <td>
 
 <div class="btn-group btn-group-sm">

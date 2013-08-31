@@ -14,7 +14,7 @@ class CreatePages < ActiveRecord::Migration
       t.boolean :is_case,     :null => false, :default => false
       t.string  :img_url,     :null => true
       t.boolean :normal,     :null => false, :default => true
-      t.datetime :published_at,	:null => true
+      t.date :published_at,	:null => true
       t.timestamps
     end
 

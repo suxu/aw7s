@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20130831103047) do
     t.string   "title",        limit: 128,                 null: false
     t.string   "url",                                      null: false
     t.string   "domain",                                   null: false
-    t.string   "keywords"
     t.string   "tags"
     t.string   "summary"
     t.integer  "player_id",                default: 0,     null: false
@@ -50,7 +49,7 @@ ActiveRecord::Schema.define(version: 20130831103047) do
     t.boolean  "is_case",                  default: false, null: false
     t.string   "img_url"
     t.boolean  "normal",                   default: true,  null: false
-    t.datetime "published_at"
+    t.date     "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
