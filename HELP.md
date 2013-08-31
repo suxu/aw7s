@@ -16,6 +16,8 @@
 
 git remote add heroku git@heroku.com:aw7s.git
 
+git remote add heroku git@107.21.95.3:aw7s.git
+
 vpn:dylanv587
 
 
@@ -23,7 +25,7 @@ heroku login
 
  input email & password
 
-heroku create -app aw7s
+heroku apps:create aw7s-dev
  
  git remote add heroku git@heroku.com:aw7s.git
 
