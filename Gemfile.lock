@@ -75,6 +75,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    mysql2 (0.3.11)
     netrc (0.7.7)
     orm_adapter (0.4.0)
     pg (0.16.0)
@@ -150,6 +151,7 @@ DEPENDENCIES
   heroku (~> 2.40.0)
   jbuilder (~> 1.2)
   jquery-rails
+  mysql2
   pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
