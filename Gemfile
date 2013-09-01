@@ -53,7 +53,7 @@ end
 
 group :production do
  # Use postgresql as the database for Active Record
-  # gem 'pg'
+   gem 'pg'
   # gem 'mysql2'
 end
 
