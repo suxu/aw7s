@@ -1,6 +1,8 @@
 module Console
 class SitesController < AppController
 
+	load_and_authorize_resource :class => "Site",except: [:create,:update]
+
 	def index
 		@site  = Site.new
 		@sites = Site.all

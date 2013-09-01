@@ -8,5 +8,8 @@
 目前共收录了与aws相关的来自
 <%= link_to Site.all.count ,console_sites_path %>个网站的<%= link_to Page.all.count,list_console_pages_path %></span>个页面
 </p>
+<% if current_player.is_master %>
+<%= link_to "初始化数据",reload_data_console_pages_path,:method=>:put,:class=>"btn btn-danger btn-lg" %>
+<%end%>
 </div>
 </div>

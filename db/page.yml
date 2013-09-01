@@ -83,3 +83,6 @@ pages:
         img_url: http://static.36kr.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-29-at-10.55.25.png
         is_banner: true
         published_at: 2012-11-29
+
+    -   title: Rails 主机，VPS，服务器推荐
+        url: http://ruby-china.org/wiki/rails_hosting

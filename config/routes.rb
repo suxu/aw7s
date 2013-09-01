@@ -49,6 +49,7 @@ Aw7s::Application.routes.draw do
     resources :pages do 
       collection do
         get :list
+        put :reload_data
       end
     end
   end

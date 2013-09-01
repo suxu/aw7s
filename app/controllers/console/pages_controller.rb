@@ -1,6 +1,8 @@
 module Console
 class PagesController < AppController
 
+	load_and_authorize_resource :class => "Page",except: [:create,:update]
+
 	def index
 
 	end
@@ -49,6 +51,10 @@ class PagesController < AppController
 		@page.destroy
 	end
 
+	def reload_data
+		Page.reload_data 
+		redirect_to list_console_pages_path
+	end
 	
 end
 
