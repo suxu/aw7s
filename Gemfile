@@ -53,8 +53,8 @@ end
 
 group :production do
  # Use postgresql as the database for Active Record
-  gem 'pg'
-  #gem 'mysql2'
+  # gem 'pg'
+  # gem 'mysql2'
 end
 
 # Use ActiveModel has_secure_password
