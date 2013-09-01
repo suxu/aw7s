@@ -35,6 +35,8 @@ services.each do |s|
 		Covering.create(:service_code=>s.code,:region_code=>reg.code)
 	end
 end
+p '-------------Create Pages By YML------------'
+Page.reload_data
 
 p '-------------Init Master--------------------'
 Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078",:is_master=>true)

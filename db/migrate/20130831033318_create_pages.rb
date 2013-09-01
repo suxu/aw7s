@@ -7,7 +7,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :tags,         :null => true
       t.string :summary,		  :null => true
       t.integer :player_id,		:null => false, :default => 0
-      t.string 	:player_name,	:null => false, :limit => 64
+      t.string 	:player_name,	:null => false, :default=> 'aw7s',:limit => 64
       t.boolean :original,		:null => false, :default => false
       t.integer :read_count,	:null => false,	:default => 0
       t.boolean :is_banner,		:null => false,	:default => false

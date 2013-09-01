@@ -21,7 +21,11 @@ class Page < ActiveRecord::Base
 		where(:original => true)
 	end
 
-	
+	def self.reload_data
+		Page.destroy_all
+		page = YAML::load_file(File.join(Rails.root, 'db', 'page.yml'))
+		Page.create(page["pages"])
+	end
 
 	#
 	before_save do

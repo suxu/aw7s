@@ -49,7 +49,7 @@ html,body { height: 100%;}
 .carousel-indicators li{border: 1px solid #0088cc;}
 .carousel-indicators .active{background-color: #0088cc;}
 .carousel-caption{color:#000; }/* #0088cc;*/
-
+.banner_img{max-width: 900px;max-height: 450px;margin-left: auto;margin-right:auto;}
 /**/
 .form-signin {
   max-width: 330px;

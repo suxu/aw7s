@@ -36,19 +36,19 @@ ActiveRecord::Schema.define(version: 20130831103047) do
   end
 
   create_table "pages", force: true do |t|
-    t.string   "title",        limit: 128,                 null: false
-    t.string   "url",                                      null: false
-    t.string   "domain",                                   null: false
+    t.string   "title",        limit: 128,                  null: false
+    t.string   "url",                                       null: false
+    t.string   "domain",                                    null: false
     t.string   "tags"
     t.string   "summary"
-    t.integer  "player_id",                default: 0,     null: false
-    t.string   "player_name",  limit: 64,                  null: false
-    t.boolean  "original",                 default: false, null: false
-    t.integer  "read_count",               default: 0,     null: false
-    t.boolean  "is_banner",                default: false, null: false
-    t.boolean  "is_case",                  default: false, null: false
+    t.integer  "player_id",                default: 0,      null: false
+    t.string   "player_name",  limit: 64,  default: "aw7s", null: false
+    t.boolean  "original",                 default: false,  null: false
+    t.integer  "read_count",               default: 0,      null: false
+    t.boolean  "is_banner",                default: false,  null: false
+    t.boolean  "is_case",                  default: false,  null: false
     t.string   "img_url"
-    t.boolean  "normal",                   default: true,  null: false
+    t.boolean  "normal",                   default: true,   null: false
     t.date     "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"

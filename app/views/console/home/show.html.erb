@@ -1,23 +1,25 @@
 
-<div id="carousel-example-captions" class="carousel slide" style="height: 410px;width:950px;margin-left:auto;margin-right:auto;">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
-    <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
-    <li data-target="#carousel-example-captions" data-slide-to="3" class=""></li>
-    <li data-target="#carousel-example-captions" data-slide-to="4" class=""></li>
-  </ol>
-  <div class="carousel-inner" style="width:900px;">
-    <div class="item active">
-      <a href="http://aws.amazon.com/cn/rds/" target="_blank">
-      <%= image_tag "banner/rds.png"%>
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>
-    </a>
-    </div>
 
+<div id="carousel-console-captions" class="carousel slide" style="height: 500px;width:900px;margin-left:auto;margin-right:auto;">
+  <ol class="carousel-indicators">
+    <% @pages.length.times.each do |i|%>
+      <li data-target="#carousel-console-captions" data-slide-to="<%= i %>" class=""></li>
+    <%end%>
+  </ol>
+  <div class="carousel-inner text-center" >
+    <% @pages.each_with_index do |page,i|%>
+      <div class="item <%= 'active' if i == 0 %>" title="<%= page.title %>" >
+      <a href="<%= page.url %>" target="_blank">
+        <img class="banner_img" src="<%= page.img_url %>" />
+        <div class="carousel-caption">
+          <h5 class="banner_h5"><% page.title%></h5>
+        </div>
+      </a>
+    </div>
+    <%end%>
+
+   
+<!-- 
     <div class="item">
       <iframe src="http://getbootstrap.com/components/" width="940" height="400"></iframe>
     </div>
@@ -40,24 +42,15 @@
       </div>
       </a>
     </div>
-     <div class="item">
-      <a href="http://aws.amazon.com/cn/web-applications/social-media" target="_blank">
-      <%= image_tag "banner/shejiao.png"%>
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>
-      </a>
-    </div>
-
+ -->
 
 
   </div>
-<!--   <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+<!--   <a class="left carousel-control" href="#carousel-console-captions" data-slide="prev">
     <span class="icon-prev"></span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-    <span class="icon-next"></span>
+  <a class="right carousel-control" href="#carousel-console-captions" data-slide="next">
+    <span class="icon-next glyphicon glyphicon-arrow-right"></span>
   </a> -->
 </div>
 

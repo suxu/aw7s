@@ -1,0 +1,85 @@
+pages:
+    -   title: AWS 免费使用套餐
+        url: http://aws.amazon.com/cn/free
+
+    -   title: AWS 上的游戏
+        url:   http://aws.amazon.com/cn/game-hosting
+
+    -   title: AWS 上的 Web、移动与社交应用程序
+        url:   http://aws.amazon.com/cn/web-mobile-social
+
+    -   title: AWS Marketplace 800多款适用于aws的免费和付费软件产品
+        url: https://aws.amazon.com/marketplace
+        img_url: http://d36cz9buwru1tt.cloudfront.net/cn/marketplace.png
+        is_banner: true
+
+    -   title: Amazon EC2预留实例
+        url: http://aws.amazon.com/cn/ec2/reserved-instances
+        img_url: http://d36cz9buwru1tt.cloudfront.net/cn/EC2_Instances.png
+        is_banner: true
+
+    -   title: Amazon RDS 在云中设置操作和扩展关系数据库
+        url: http://aws.amazon.com/cn/rds
+        img_url: http://d36cz9buwru1tt.cloudfront.net/cn/Amazon_RDS.png
+        is_banner: true
+
+    -   title: AWS Certification Frequently Asked Questions (FAQs)
+        url: http://aws.amazon.com/cn/certification/faq
+
+    -   title: 亚马逊与IBM云端争霸：中情局合同成焦点
+        url: http://tech.sina.com.cn/i/2013-07-22/09368561674.shtml
+
+    -   title: AWS推数据仓库服务Redshift 价格仅是Teradata IBM Oracle的十分之一
+        url: http://www.csdn.net/article/2012-11-29/2812323-Amazon-Redshift
+
+    -   title: IBM不满CIA与AWS合作 担心其地位不稳
+        url: http://cio.zdnet.com.cn/cio/2013/0609/2163533.shtml
+
+    -   title: 小伙伴儿们争相追赶亚马逊
+        url: http://server.zdnet.com.cn/server/2013/0829/2174035.shtml
+        published_at: 2013-08-29
+
+    -   title: IaaS报告显示 云领域Amazon称霸CSC紧随其后
+        url: http://server.zdnet.com.cn/server/2013/0822/2173289.shtml
+        published_at: 2013-08-22
+
+    -   title: AWS延伸到移动开发环节，Amazon推出移动设备消息推送服务(Amazon SNS Mobile Push)
+        url: http://www.36kr.com/p/205405.html
+
+    -   title: 亚马逊AWS中文站悄然上线，云计算大佬亚马逊的AWS服务或很快进入中国
+        url: http://www.36kr.com/p/200293.html
+
+    -   title: Amazon创始人贝佐斯谈AWS、创新与客户服务
+        url: http://www.36kr.com/p/176566.html
+
+    -   title: 亚马逊正式在中国推出个人云存储服务Cloud Drive
+        url: http://www.36kr.com/p/202720.html
+        published_at: 2013-04-19
+
+    -   title: 大数据公司Amazon
+        url: http://www.36kr.com/p/200473.html
+        img_url: http://a.36krcnd.com/photo/b55cc80018616b33c6d36c4a6a01bf08.png
+        published_at: 2013-01-01
+
+    -   title: Amazon携手Cloud vLab开展教学课程，引导入门者学会使用AWS
+        url: http://www.36kr.com/p/205026.html
+
+    -   title: AWS GovCloud：Amazon把美国政府带至“云”上
+        url: http://www.36kr.com/p/40595.html
+
+    -   title: Amazon携手Cloud vLab开展教学课程，引导入门者学会使用AWS
+        url: http://www.36kr.com/p/205026.html
+        published_at: 2013-07-30
+        img_url: http://a.36krcnd.com/photo/619766eacef034848d3b7d63220aeb2e.png
+        is_banner: true
+
+    -   title: 亚马逊网络服务AWS宣布旗下的S3存储服务价格将全面下调约25%
+        url: http://www.36kr.com/p/176243.html
+        img_url: http://static.36kr.com/wp-content/uploads/2012/11/100_0724.jpg
+        published_at: 2012-11-29
+
+    -   title: Amazon云计算服务今年或创收15亿美元
+        url: http://www.36kr.com/p/176085.html
+        img_url: http://static.36kr.com/wp-content/uploads/2012/11/Screen-Shot-2012-11-29-at-10.55.25.png
+        is_banner: true
+        published_at: 2012-11-29
