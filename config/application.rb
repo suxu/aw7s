@@ -23,9 +23,9 @@ module Aw7s
     # config.i18n.default_locale = :de
     I18n.locale = config.i18n.default_locale = 'zh-CN'
 
-    #config.assets.enabled = false
+    config.assets.enabled = true
 
-    #config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = false
 
     # config.assets.paths << "#{Rails.root}/vender/bootstrap/css"
     # config.assets.paths << "#{Rails.root}/vender/bootstrap/fonts"
