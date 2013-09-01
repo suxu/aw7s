@@ -25,11 +25,11 @@ heroku login
 
  input email & password
 
-heroku apps:create aw7s-dev
+heroku apps:create aw7s
  
  git remote add heroku git@heroku.com:aw7s.git
 
-git pull heroku master
+git push heroku master
 	
 
 heroku run rake db:migrate --app aw7s
