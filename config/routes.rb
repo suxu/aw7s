@@ -14,6 +14,10 @@ Aw7s::Application.routes.draw do
     delete  'console/sign_out', to: 'console/sessions#destroy',     as: :destroy_console_session
   end
 
+  scope module: :front do 
+    resources :pages, :only=>[:index]
+  end
+
   namespace :console do
 
     #root :to => 'home#show'
