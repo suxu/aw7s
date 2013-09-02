@@ -5,7 +5,7 @@ class Page < ActiveRecord::Base
 	belongs_to :site, :class_name => 'Site' ,
 			   :primary_key => "domain", :foreign_key => "domain",:counter_cache => true
 
-	#acts_as_taggable
+	acts_as_taggable
 
 	validates_uniqueness_of :url
 
