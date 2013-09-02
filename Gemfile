@@ -44,7 +44,7 @@ gem 'cancan', '~> 1.6.10'
 gem 'heroku', '~> 2.40.0'
 
 # https://github.com/mbleigh/acts-as-taggable-on
-gem 'acts-as-taggable-on', '~> 2.4.1' 
+# gem 'acts-as-taggable-on', '~> 2.4.1' 
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
