@@ -1,5 +1,5 @@
-#source 'https://rubygems.org'  
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org'  
+#source 'http://ruby.taobao.org'
 
 # heroku set ruby version
 ruby '2.0.0'
