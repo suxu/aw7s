@@ -1,10 +1,5 @@
-class PlayersController < ApplicationController
-
-	def home
-
-	end
-
-	def index
+module Front
+class PlayersController < AppController
 		
-	end
+end
 end

@@ -1,0 +1,22 @@
+<div id="carousel-console-captions" class="carousel slide" style="height: 500px;width:900px;margin-left:auto;margin-right:auto;">
+<ol class="carousel-indicators">
+  <% @banners.length.times.each do |i|%>
+    <li data-target="#carousel-console-captions" data-slide-to="<%= i %>" class="<%= 'active' if i == 0%>"></li>
+  <%end%>
+</ol>
+<div class="carousel-inner text-center" >
+<% @banners.each_with_index do |page,i|%>
+  <div class="item <%= 'active' if i == 0 %>" title="<%= page.title %>" >
+    <a href="<%= page.url %>" target="_blank">
+      <img class="banner_img" src="<%= page.img_url %>" />
+      <div class="carousel-caption">
+        <h5 class="banner_h5"><% page.title%></h5>
+      </div>
+    </a>
+ </div>
+<%end%>
+
+</div>
+
+</div>
+<hr/>

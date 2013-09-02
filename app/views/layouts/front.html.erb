@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <title>Aw7s</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -7,17 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="brand" href="#">aw7s</a>
-			<div class="btn-group pull-right">
-			   <a class="btn" href="/sign_in"><i class="icon-user"></i>登录</a>
-			</div>
-		</div>
-	</div>
-</div>
-<%= yield %>
+<div id="wrap">
 
+<div class="navbar navbar-default navbar-static-bottom">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">AWS信息平台</a>
+    </div>
+    <div class="navbar-collapse collapse">
+     <%= render "front/navbar"%>
+    </div>
+  </div>
+</div>
+
+<div class="container" >
+	<%= yield %>
+</div>
+</div>
+
+	<%= render "layouts/footer"%>
 </body>
 </html>

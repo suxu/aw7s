@@ -1,11 +1,15 @@
+<div class="alert alert-warning fade in">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <strong>没错!</strong> 这里就是 Aw7s 的管理控制台.
+</div>
 <div id="carousel-console-captions" class="carousel slide" style="height: 500px;width:900px;margin-left:auto;margin-right:auto;">
 <ol class="carousel-indicators">
-  <% @pages.length.times.each do |i|%>
+  <% @banners.length.times.each do |i|%>
     <li data-target="#carousel-console-captions" data-slide-to="<%= i %>" class="<%= 'active' if i == 0%>"></li>
   <%end%>
 </ol>
 <div class="carousel-inner text-center" >
-<% @pages.each_with_index do |page,i|%>
+<% @banners.each_with_index do |page,i|%>
   <div class="item <%= 'active' if i == 0 %>" title="<%= page.title %>" >
     <a href="<%= page.url %>" target="_blank">
       <img class="banner_img" src="<%= page.img_url %>" />
@@ -52,28 +56,3 @@
   </a> -->
 </div>
 <hr/>
-<!-- <ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-<div class="media">
-        <a class="pull-left" href="#">
-         
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Media heading</h4>
-          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </div>
-      </div>
-<div class="media">
-        <a class="pull-left" href="#">
-         
-        </a>
-        <div class="media-body">
-          <h4 class="media-heading">Media heading</h4>
-          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        </div>
-      </div> -->

@@ -2,7 +2,7 @@ Aw7s::Application.routes.draw do
 
   #root :to => 'home#show'
 
-  root :to => 'console/home#show'
+  root :to => 'front/home#show'
 
   devise_for :players, :path => "/", skip: [:sessions,:confirmations, :passwords,:registrations]
 
@@ -24,6 +24,7 @@ Aw7s::Application.routes.draw do
 
     get '/' => 'home#show'
 
+    resource :home, :only => [:show] ,controller: :home
 
     resources :regions do 
       get :list ,:on => :collection

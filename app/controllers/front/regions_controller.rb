@@ -1,23 +1,10 @@
-class RegionsController < ApplicationController
-
-	def home
-
-	end
-
+module Front
+class RegionsController < AppController
+	
 	def index
-		#@regions = Region.all
-	end
-
-	def list
 
 	end
 
-	def new
-
-	end
-
-	def create
-
-	end
-
+		
+end
 end

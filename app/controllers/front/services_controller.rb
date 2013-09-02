@@ -1,4 +1,5 @@
-class ProductsController < ApplicationController
+module Front
+class ServicesController < ApplicationController
 
 	def home
 
@@ -19,5 +20,7 @@ class ProductsController < ApplicationController
 	def create
 
 	end
+
+end
 
 end
