@@ -26,7 +26,7 @@
 	<li><%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_region_zone_path(@region,zone) %></li>
 	<% if can? :destroy, zone %>
 	<li>
-	<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_region_zone_path(@region,zone),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %>
+	<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_region_zone_path(@region,zone),:method=>:delete,:format=>"js",:remote=>true,:data => { :confirm => 'Are you sure?' } %>
 	</li>
 	<%end%>
 	</ul>

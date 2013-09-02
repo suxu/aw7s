@@ -44,7 +44,7 @@
 		   </li>
 		   <% if can? :destroy, region %>
 		   <li>
-				<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_region_path(region),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %>
+				<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_region_path(region),:method=>:delete,:format=>"js",:remote=>true,:data => { :confirm => 'Are you sure?' } %>
 			</li>
 			<%end%>
 		  </ul>

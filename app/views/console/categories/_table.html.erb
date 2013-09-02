@@ -23,7 +23,7 @@
    <li><%= link_to raw('<i class="glyphicon glyphicon-edit"></i> 修改'),edit_console_category_path(cate) %></li>
 <% if can? :destroy, cate %>
 <li>
-<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_category_path(cate),:method=>:delete,:format=>"js",:remote=>true,:confirm=>"Are you sure?" %></li>
+<%= link_to raw('<i class="glyphicon glyphicon-trash"></i> 删除'),console_category_path(cate),:method=>:delete,:format=>"js",:remote=>true,:data => { :confirm => 'Are you sure?' } %></li>
 <%end%>
   </ul>
 </div>
