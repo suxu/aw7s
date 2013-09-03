@@ -2,13 +2,16 @@
 <fieldset>
 <legend>收录文章</legend>
 <div class="alert alert-info">
- Aw7S 总共收录了<strong><%= @pages.total_entries %></strong>篇关于运计算的文章.
+ Aw7s总共收录了<strong><%= @pages.total_entries %></strong>篇关于云计算的文章.
 </div>
+<ul class="list-group">
 <% @pages.each do |page|%>
-  <p class=""><%= link_to page.title,page.url,:target=>"_blank" %> [<%= page.published_at%>]</p>
+ <li class="list-group-item">
+ 	<span class="pull-right"> [<%= page.published_at%>]</span>
+    <p class=""><%= link_to page.title,page.url,:target=>"_blank" %></p>
+ </li>
 <%end%>
+</ul>
 </fieldset>
-
-
 <%= will_paginate @pages %> 
 </div>

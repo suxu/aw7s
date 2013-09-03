@@ -1,6 +1,6 @@
 <div class="container container-front" style="">
-<!-- <fieldset>
-<legend>AWS服务</legend> -->
+<fieldset>
+<legend>服务&产品</legend>
 
 <ul class="nav nav-tabs">
 <li <%= active_class if action_name == "index" %> >
@@ -16,21 +16,20 @@
 <div class="alert alert-info">
  AWS 提供了<strong><%= @services.total_entries %></strong>个云计算服务.
 </div>
+
+
+<ul class="list-group">
 <% @services.each do |service|%>
-
-<div class="media">
-  <div class="media-body">
-   <div class="media-heading">
+  <li class="list-group-item">
+    <span class="pull-right"> <%= normal_tag service.normal %></span>
    	<%= link_to service.full_name,service.aws_url,:target=>"_blank" %>
-   	 <%= normal_tag service.normal %>
-   	 </div>
-    <p><%=  service.caption %></p>
-  </div>
-</div>
-
+   	<p><%=  service.caption %></p>
+  </li>
 
 <%end%>
-<!-- </fieldset> -->
+</ul>
+
+</fieldset>
 
 
 <%= will_paginate @services %> 

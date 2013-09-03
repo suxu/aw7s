@@ -3,10 +3,23 @@
 <fieldset>
 <legend>覆盖地区</legend>
 <div class="alert alert-info">
- 目前AWS覆盖了全球<strong><%= @regions.length %></strong>个地区.
+AWS当前覆盖了全球<strong><%= @regions.length %></strong>个地区.
 </div>
+
+
+<ul class="list-group">
 <% @regions.each do |region|%>
-  <p class=""><%= link_to "#{region.name} #{region.en_name} ","#",:target=>"_blank" %> [<%= region.code %>]</p>
+
+ <li class="list-group-item">
+    <span class="badge" title="可用区域"><%= region.zones_count %></span>
+    <p class=""><%= link_to "#{region.name} #{region.en_name} ","#",:target=>"_blank" %> [<%= region.code %>]</p>
+  </li>
+  
 <%end%>
+
+ 
+</ul>
+
+
 </fieldset>
 </div>

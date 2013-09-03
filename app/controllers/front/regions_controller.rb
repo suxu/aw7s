@@ -5,6 +5,10 @@ class RegionsController < AppController
 		@regions = Region.all
 	end
 
+	def show
+		
+	end
+
 		
 end
 end
