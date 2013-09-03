@@ -5,14 +5,14 @@
   <h4 class="modal-title"><%= @region.name %> <%= @region.en_name %></h4>
 </div>
 <div class="modal-body">
-  <ul class="list-group">
-	<li class="list-group-item active"><span class="badge"><%= @zones.length %></span><%= @region.code %> 可用区域</li>
-	<% @zones.each do |zone|%>
-		<li class="list-group-item">
-			<span class="pull-right"> <%= normal_tag zone.normal %></span>
-			<%= zone.code %></li>
-	<%end%>
-  </ul>
+<ul class="list-group">
+<li class="list-group-item active"><span class="badge"><%= @zones.length %></span><%= @region.code %> 可用区域</li>
+<% @zones.each do |zone|%>
+	<li class="list-group-item">
+		<span class="pull-right"> <%= normal_tag zone.normal %></span>
+		<%= zone.code %></li>
+<%end%>
+</ul>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-default" data-dismiss="modal">关 闭</button>

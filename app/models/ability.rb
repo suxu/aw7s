@@ -15,7 +15,7 @@ class Ability
             can [:index,:list], Player
             can [:index], Zone 
             can [:index], Site
-            can [:index,:list],Page
+            can [:index,:list,:new,:create],Page
 
         end
     # Define abilities for the passed in user here. For example:
