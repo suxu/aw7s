@@ -1,0 +1,12 @@
+
+<div class="container container-front" style="">
+<fieldset>
+<legend>覆盖地区</legend>
+<div class="alert alert-info">
+ 目前AWS覆盖了全球<strong><%= @regions.length %></strong>个地区.
+</div>
+<% @regions.each do |region|%>
+  <p class=""><%= link_to "#{region.name} #{region.en_name} ","#",:target=>"_blank" %> [<%= region.code %>]</p>
+<%end%>
+</fieldset>
+</div>

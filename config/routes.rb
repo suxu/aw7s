@@ -16,10 +16,11 @@ Aw7s::Application.routes.draw do
 
   #
   scope module: :front do 
+    get "services/by/:category_code" => "services#by",:as => "services_by"
+    
+    resources :services, :only => [:index]
+    resources :regions, :only => [:index]
     resources :pages, :only => [:index]
-     get "services/by/:category_code" => "services#by",:as => "services_by"
-    resources :services, :only => [:index] do 
-    end
   end
 
   #
