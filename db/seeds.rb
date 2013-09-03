@@ -41,7 +41,6 @@ Page.reload_data
 p '-------------Init Master--------------------'
 Player.create(:name => "suxu",:email=>"it@aw7s.com",:password=>"12345678",:password_confirmation=>"12345678",:phone=>"13258232078",:is_master=>true)
 
-p '-------------Init Pages---------------------'
 
 p '-------------Seed  End--------------------'
 

@@ -12,9 +12,12 @@ AWS当前覆盖了全球<strong><%= @regions.length %></strong>个地区.
 
  <li class="list-group-item">
     <span class="badge" title="可用区域"><%= region.zones_count %></span>
-    <p class=""><%= link_to "#{region.name} #{region.en_name} ","#",:target=>"_blank" %> [<%= region.code %>]</p>
+    <p class="">
+    	
+    	<%= link_to "#{region.name} #{region.en_name} ",region_path(region.code),:'data-toggle'=>"modal", :'data-target'=>"#regionModal#{region.id}" %> [<%= region.code %>]
+    	<div class="modal fade text-left" id="regionModal<%= region.id %>" tabindex="-1" role="dialog"  ></div>
+	</p>
   </li>
-  
 <%end%>
 
  
@@ -22,4 +25,5 @@ AWS当前覆盖了全球<strong><%= @regions.length %></strong>个地区.
 
 
 </fieldset>
+
 </div>

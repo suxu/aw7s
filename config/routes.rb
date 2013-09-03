@@ -19,7 +19,7 @@ Aw7s::Application.routes.draw do
     get "services/by/:category_code" => "services#by",:as => "services_by"
     
     resources :services, :only => [:index]
-    resources :regions, :only => [:index]
+    resources :regions, :only => [:index,:show]
     resources :pages, :only => [:index]
   end
 
