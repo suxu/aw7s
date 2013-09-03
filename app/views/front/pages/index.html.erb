@@ -1,0 +1,13 @@
+
+
+<div class="container" style="height: auto;width:900px;margin-left:auto;margin-right:auto;">
+<fieldset>
+<legend>文章列表</legend>
+<% @pages.each do |page|%>
+  <p class=""><%= link_to page.title,page.url,:target=>"_blank" %> [<%= page.published_at%>]</p>
+<%end%>
+</fieldset>
+
+
+<%= will_paginate @pages %> 
+</div>
