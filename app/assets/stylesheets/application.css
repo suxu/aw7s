@@ -14,7 +14,7 @@
 
 html,body { height: 100%;}
 .container {max-width: 100%;}
-
+.container-front{height: auto;width:940px;margin-left:auto;margin-right:auto;}
 
 /* Wrapper for page content to push down footer */
 #wrap {

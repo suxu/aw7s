@@ -14,17 +14,17 @@ Aw7s::Application.routes.draw do
     delete  'console/sign_out', to: 'console/sessions#destroy',     as: :destroy_console_session
   end
 
+  #
   scope module: :front do 
-    resources :pages, :only=>[:index]
+    resources :pages, :only => [:index]
+     get "services/by/:category_code" => "services#by",:as => "services_by"
+    resources :services, :only => [:index] do 
+    end
   end
 
+  #
   namespace :console do
 
-    #root :to => 'home#show'
-
-    # get   'console/sign_in', to: 'console/sessions#new',      as: :new_console_session
-    # post  'console/sign_in', to: 'console/sessions#create',     as: :console_session
-    # delete 'console/sign_out', to: 'console/sessions#destroy',     as: :destroy_console_session
 
     get '/' => 'home#show'
 

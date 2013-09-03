@@ -1,25 +1,21 @@
 module Front
-class ServicesController < ApplicationController
+class ServicesController < AppController
 
-	def home
-
-	end
 
 	def index
-
+		@categories = Category.all
+		@services = Service.includes(:category)
+		@services = @services.paginate(:page => params[:page], :per_page => 10)
 	end
 
-	def list
-		
+
+	def by
+		@categories = Category.all
+		@services = Service.includes(:category).where(:category_code => params[:category_code])
+		@services = @services.paginate(:page => params[:page], :per_page => 10)
+		render :action => :index
 	end
 
-	def new
-
-	end
-
-	def create
-
-	end
 
 end
 
